@@ -1,0 +1,24 @@
+    <div class="container">
+        <h1>New Review</h1>
+
+    
+        <%= simple_form_for([@restaurant, @review]) do |f| %>
+    
+        <li>
+            <%= f.input :content %>
+        </li>
+        <li>
+            <%= f.input :rating, collection: (0..5) %>
+        </li>
+        <li>
+        <%= f.submit %>
+        </li>
+
+        <%= link_to 'Back to list', restaurants_path%>
+        <%= link_to 'Add a review', new_restaurant_review_path(@restaurant)%>
+
+
+        <% end %>
+    </div>
+
+

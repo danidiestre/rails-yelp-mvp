@@ -1,0 +1,37 @@
+
+<body>
+
+    <div class="container">
+        <h1>New Restaurant</h1>
+    
+        <%= simple_form_for(@restaurant) do |f| %>
+    
+        <li>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </li>
+        <li>
+            <%= f.label :address %>
+            <%= f.text_field :address %>
+        </li>
+        <li>
+            <%= f.label :phone_number %>
+            <%= f.text_field :phone_number %>
+        </li>
+        <li>
+            <%= f.label :category %>
+            <%= f.text_field :category %>
+        </li>
+        <li>
+        <%= f.submit %>
+        </li>
+
+        <%= link_to 'Back to list', restaurants_path%>
+        <% end %>
+    </div>
+
+
+
+
+
+</body>
